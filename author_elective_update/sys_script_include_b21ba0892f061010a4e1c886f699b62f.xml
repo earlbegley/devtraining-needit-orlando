@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_58872_needit.GetEmailAdress</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description>Script Include to return an email address. The calling client-side script passes a sys_id for a User table record.</description>
+        <name>GetEmailAdress</name>
+        <script><![CDATA[var GetEmailAddress = Class.create();
+// Extend the global.AbstractAjaxProcessor class
+GetEmailAddress.prototype = Object.extendsObject(NeedIt.AbstractAjaxProcessor,{
+	// Define the getEmail function.  
+	// Create a GlideRecord for the User table.
+	// Use the sysparm_userID passed from the client side to retrieve a record from the User table.
+	// Return the email address for the requested record
+	getEmail: function() {
+		var userRecord = new GlideRecord("sys_user");
+		userRecord.get(this.getParameter('sysparm_userID'));
+		return userRecord.email + '';
+	},
+	type: 'GetEmailAddress'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>earl.begley</sys_created_by>
+        <sys_created_on>2020-07-14 22:58:52</sys_created_on>
+        <sys_id>b21ba0892f061010a4e1c886f699b62f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>GetEmailAdress</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_script_include_b21ba0892f061010a4e1c886f699b62f</sys_update_name>
+        <sys_updated_by>earl.begley</sys_updated_by>
+        <sys_updated_on>2020-07-14 23:18:44</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</application>
+        <file_path/>
+        <instance_id>ae5f41b3db639f400e785d00cf96197e</instance_id>
+        <instance_name>dev68480</instance_name>
+        <name>sys_script_include_b21ba0892f061010a4e1c886f699b62f</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_58872_needit.GetEmailAdress&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;true&lt;/client_callable&gt;&lt;description&gt;Script Include to return an email address. The calling client-side script passes a sys_id for a User table record.&lt;/description&gt;&lt;name&gt;GetEmailAdress&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var GetEmailAddress = Class.create();
+// Extend the global.AbstractAjaxProcessor class
+GetEmailAddress.prototype = Object.extendsObject(NeedIt.AbstractAjaxProcessor,{
+	// Define the getEmail function.  
+	// Create a GlideRecord for the User table.
+	// Use the sysparm_userID passed from the client side to retrieve a record from the User table.
+	// Return the email address for the requested record
+	getEmail: function() {
+		var userRecord = new GlideRecord("sys_user");
+		userRecord.get(this.getParameter('sysparm_userID'));
+		return userRecord.email + '';
+	},
+	type: 'GetEmailAddress'
+});]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;earl.begley&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-07-14 22:58:52&lt;/sys_created_on&gt;&lt;sys_id&gt;b21ba0892f061010a4e1c886f699b62f&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;GetEmailAdress&lt;/sys_name&gt;&lt;sys_package display_value="NeedIt" source="x_58872_needit"&gt;6ead8e780f603200cd674f8ce1050ed1&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="NeedIt"&gt;6ead8e780f603200cd674f8ce1050ed1&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_b21ba0892f061010a4e1c886f699b62f&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;earl.begley&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-07-14 23:18:44&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1620555695</payload_hash>
+        <record_name>GetEmailAdress</record_name>
+        <reverted_from/>
+        <source>d0be779a2f211010a4e1c886f699b669</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>earl.begley</sys_created_by>
+        <sys_created_on>2020-07-14 23:18:44</sys_created_on>
+        <sys_id>eaff644d2f061010a4e1c886f699b6cc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1734f9f923f0000001</sys_recorded_at>
+        <sys_updated_by>earl.begley</sys_updated_by>
+        <sys_updated_on>2020-07-14 23:18:44</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>26ff644d9a06101014786e14747115cc</update_guid>
+        <update_guid_history>26ff644d9a06101014786e14747115cc:1620555695,276ba4897a0610100e0dec425b1a1a9e:822779473</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>earl.begley</sys_created_by>
+        <sys_created_on>2020-07-14 23:28:52</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>074ca122866d4bec9e54d3ba37e489c4</sys_id>
+        <sys_metadata>b21ba0892f061010a4e1c886f699b62f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>GetEmailAdress</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_scope_delete display_value="">94872a8897db403e8ee69a431de2fca4</sys_scope_delete>
+        <sys_update_name>sys_script_include_b21ba0892f061010a4e1c886f699b62f</sys_update_name>
+        <sys_update_version display_value="sys_script_include_b21ba0892f061010a4e1c886f699b62f">eaff644d2f061010a4e1c886f699b6cc</sys_update_version>
+        <sys_updated_by>earl.begley</sys_updated_by>
+        <sys_updated_on>2020-07-14 23:28:52</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
